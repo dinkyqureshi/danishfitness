@@ -1,10 +1,356 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Danish Fitness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danish Health Zone</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:white;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.9);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+border-bottom:1px solid #d4af37;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#d4af37;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#d4af37;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600') center/cover;
+}
+
+.hero-content h1{
+font-size:60px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#d4af37;
+color:black;
+font-weight:600;
+text-decoration:none;
+border-radius:30px;
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#d4af37;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about-text p{
+line-height:1.8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:15px;
+border:1px solid #222;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
+
+.price{
+font-size:35px;
+color:#d4af37;
+margin:15px 0;
+}
+
+.social{
+text-align:center;
+}
+
+.social a{
+display:inline-block;
+margin:10px;
+padding:15px 25px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+}
+
+.contact-form{
+max-width:700px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+background:#111;
+border:none;
+color:white;
+border-radius:10px;
+}
+
+.contact-form button{
+width:100%;
+padding:15px;
+background:#d4af37;
+border:none;
+font-weight:700;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:40px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
 </head>
-<body style="background:black;color:gold;text-align:center;padding:50px;">
-    <h1>Danish Fitness</h1>
-    <p>Official Fitness Coaching Website</p>
+
+<body>
+
+<nav>
+<div class="logo">Danish Health Zone</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#plans">Plans</a></li>
+<li><a href="#social">Social</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>Transform Your Body</h1>
+
+<p>
+Premium Online Fitness Coaching,
+Fat Loss, Muscle Building &
+Complete Lifestyle Transformation
+</p>
+
+<a href="https://wa.me/917470471062" class="btn">
+Join Coaching
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Coach</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1200">
+
+<div class="about-text">
+
+<h3 style="color:#d4af37;font-size:30px;margin-bottom:15px;">
+Danish Ahmad
+</h3>
+
+<p>
+
+Helping people transform their physique,
+boost confidence and build a stronger lifestyle.
+
+Customized workout plans,
+nutrition guidance,
+fat loss coaching and muscle building programs.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="plans">
+
+<h2 class="section-title">Coaching Plans</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Basic Plan</h3>
+<div class="price">₹1499</div>
+<p>Workout Plan</p>
+<p>Diet Guidance</p>
+</div>
+
+<div class="card">
+<h3>Premium Plan</h3>
+<div class="price">₹2999</div>
+<p>Workout Plan</p>
+<p>Diet Plan</p>
+<p>Weekly Check-ins</p>
+</div>
+
+<div class="card">
+<h3>Elite Coaching</h3>
+<div class="price">₹4999</div>
+<p>Personal Support</p>
+<p>Transformation Tracking</p>
+<p>Priority WhatsApp</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="social">
+
+<h2 class="section-title">Connect With Me</h2>
+
+<div class="social">
+
+<a href="https://instagram.com/_danish_ahmad_12" target="_blank">
+Instagram 1
+</a>
+
+<a href="https://instagram.com/d_fit.journey" target="_blank">
+Instagram 2
+</a>
+
+<a href="https://wa.me/917470471062" target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+© 2026 Danish Health Zone | All Rights Reserved
+
+</footer>
+
 </body>
 </html>
